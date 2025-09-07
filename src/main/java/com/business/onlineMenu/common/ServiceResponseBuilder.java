@@ -1,5 +1,8 @@
 package com.business.onlineMenu.common;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ServiceResponseBuilder {
 
   public <T> ServiceResponse<T> build(T dto){
