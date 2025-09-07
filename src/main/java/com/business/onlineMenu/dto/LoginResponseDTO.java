@@ -4,14 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class LoginDTO {
+public class LoginResponseDTO {
 
-  private String emailId;
-
-  private String passwordHash;
-
-  private String restaurantId;
+  private List<String> restaurantIds;
 }
