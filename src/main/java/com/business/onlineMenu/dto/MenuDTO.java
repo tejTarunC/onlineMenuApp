@@ -10,8 +10,9 @@ import java.util.List;
 @NoArgsConstructor
 public class MenuDTO {
 
-    private String menuId;
-    private List<ItemDTO> items;
+  private String menuId;
+
+  private List<ItemDTO> items;
 
 
 }

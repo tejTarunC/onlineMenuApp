@@ -7,10 +7,10 @@ import org.springframework.boot.context.metrics.buffering.BufferingApplicationSt
 @SpringBootApplication
 public class OnlineMenuApplication {
 
-	public static void main(String[] args) {
-		SpringApplication app = new SpringApplication(OnlineMenuApplication.class);
-		app.setApplicationStartup(new BufferingApplicationStartup(2048));
-		app.run(args);
-	}
+  public static void main(String[] args) {
+    SpringApplication app = new SpringApplication(OnlineMenuApplication.class);
+    app.setApplicationStartup(new BufferingApplicationStartup(2048));
+    app.run(args);
+  }
 
 }

@@ -10,12 +10,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RestaurantDTO {
 
-    private String restaurantId;
-    private String ownerName;
-    private String ownerPhoneNumber;
-    private String email;
-    private String menuId;
-    private Category itemCategory;
-    private MenuDTO menuDTO;
+  private String restaurantId;
+
+  private String ownerName;
+
+  private String ownerPhoneNumber;
+
+  private String email;
+
+  private String menuId;
+
+  private MenuDTO menuDTO;
 
 }
