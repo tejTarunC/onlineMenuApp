@@ -9,12 +9,12 @@ public interface LoginRequestDTOValidator extends Function<LoginRequestDTO, Vali
   static LoginRequestDTOValidator validate() {
     return (LoginRequestDTO loginRequest) -> {
       StringBuilder message = new StringBuilder();
-      if(loginRequest == null){
+      if (loginRequest == null) {
         message.append("Login Request cannot be null");
         return new ValidationResult(message.toString());
       }
 
-      if(loginRequest.getEmailId() == null && loginRequest.getPhoneNo() == null){
+      if (loginRequest.getEmailId() == null && loginRequest.getPhoneNo() == null) {
         message.append("Both emailId and phoneNo cannot be null");
       }
       return new ValidationResult(message.toString());

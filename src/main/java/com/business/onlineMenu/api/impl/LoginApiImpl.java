@@ -16,7 +16,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -30,12 +29,12 @@ public class LoginApiImpl extends AbstractAPI implements LoginAPI {
   @Override
   public ServiceResponse<LoginResponseDTO> login(LoginRequestDTO loginRequest, HttpHeaders headers) throws Exception {
     ValidationResult validation = LoginRequestDTOValidator.validate().apply(loginRequest);
-    if(!validation.isValid()){
+    if (!validation.isValid()) {
       throw new Exception(validation.getErrorMessage());
     }
-    if(loginRequest.getPhoneNo() != null && loginRequest.getEmailId() != null){
+    if (loginRequest.getPhoneNo() != null && loginRequest.getEmailId() != null) {
       Optional<Owner> optionalResult = ownerRepo.findByEmailIdAndPhoneNo(loginRequest.getEmailId(), loginRequest.getPhoneNo());
-      if(optionalResult.isEmpty()){
+      if (optionalResult.isEmpty()) {
         log.info("Owner not present in DB");
         return ServiceResponseBuilder.build(new LoginResponseDTO());
       }
