@@ -16,13 +16,13 @@ import lombok.Data;
 public class LoginDetails {
 
   @Id
-  @Column(name = "user_id")
+  @Column(name = "login_id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   private String userName;
 
-  private String emailId;
+//  private String emailId;
 
   private String passwordHash;
 
