@@ -10,7 +10,8 @@ import org.springframework.context.annotation.ComponentScan;
   basePackages = {
     "com.business.onlineMenu.api",
     "com.business.onlineMenu.repository",
-    "com.business.onlineMenu.model"
+    "com.business.onlineMenu.model",
+    "com.business.onlineMenu.common"
 })
 public class OnlineMenuApplication {
 
