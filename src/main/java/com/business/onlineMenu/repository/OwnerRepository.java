@@ -9,11 +9,12 @@ import java.util.Optional;
 @Repository
 public interface OwnerRepository extends JpaRepository<Owner, Long> {
 
-    /**
-     * Finds an owner by their email and phone number.
-     * @param emailId The email of the owner.
-     * @param phoneNo The phone number of the owner.
-     * @return An Optional containing the found Owner, or an empty Optional if not found.
-     */
-    Optional<Owner> findByEmailIdAndPhoneNo(String emailId, String phoneNo);
+  /**
+   * Finds an owner by their email and phone number.
+   *
+   * @param emailId The email of the owner.
+   * @param phoneNo The phone number of the owner.
+   * @return An Optional containing the found Owner, or an empty Optional if not found.
+   */
+  Optional<Owner> findByEmailIdAndPhoneNo(String emailId, String phoneNo);
 }
