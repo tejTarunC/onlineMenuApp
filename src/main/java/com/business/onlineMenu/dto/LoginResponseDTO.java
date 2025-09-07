@@ -11,5 +11,5 @@ import java.util.List;
 @NoArgsConstructor
 public class LoginResponseDTO {
 
-  private List<String> restaurantIds;
+  private List<Long> restaurantIds;
 }

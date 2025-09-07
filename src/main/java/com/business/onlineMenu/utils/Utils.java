@@ -1,4 +1,4 @@
-package com.business.onlineMenu.Utils;
+package com.business.onlineMenu.utils;
 
 import com.business.onlineMenu.enums.Category;
 

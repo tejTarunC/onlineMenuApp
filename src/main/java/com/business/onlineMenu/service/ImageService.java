@@ -1,6 +1,6 @@
 package com.business.onlineMenu.service;
 
-import com.business.onlineMenu.Utils.ImageUtils;
+import com.business.onlineMenu.utils.ImageUtils;
 import com.business.onlineMenu.model.Image;
 import com.business.onlineMenu.repository.ImageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
