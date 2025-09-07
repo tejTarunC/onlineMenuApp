@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ServiceResponseBuilder {
 
-  public <T> ServiceResponse<T> build(T dto){
+  public <T> ServiceResponse<T> build(T dto) {
     ServiceResponse<T> response = new ServiceResponse<T>();
     response.setStatus(Status.OK);
     response.setPayload(dto);

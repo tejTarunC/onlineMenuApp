@@ -28,11 +28,8 @@ public class ServiceResponse<T> implements Serializable {
 
   private T payload;
 
-  public ServiceResponse(ServiceHeader header, T payload){
+  public ServiceResponse(ServiceHeader header, T payload) {
     this.header = header;
     this.payload = payload;
   }
-
-
-
 }

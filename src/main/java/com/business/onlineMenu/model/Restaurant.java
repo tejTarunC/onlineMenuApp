@@ -8,15 +8,15 @@ import lombok.Data;
 @Table(name = "restaurants")
 public class Restaurant {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "menu_id", referencedColumnName = "id")
-    private Menu menu;
+  @OneToOne(cascade = CascadeType.ALL)
+  @JoinColumn(name = "menu_id", referencedColumnName = "id")
+  private Menu menu;
 
-    @ManyToOne
-    @JoinColumn(name = "owner_id")
-    private Owner owner;
+  @ManyToOne
+  @JoinColumn(name = "owner_id")
+  private Owner owner;
 }

@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
     "com.business.onlineMenu.repository",
     "com.business.onlineMenu.model",
     "com.business.onlineMenu.common"
-})
+  })
 public class OnlineMenuApplication {
 
   public static void main(String[] args) {

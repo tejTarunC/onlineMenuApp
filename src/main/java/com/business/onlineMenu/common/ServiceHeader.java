@@ -13,21 +13,23 @@ public class ServiceHeader implements Serializable {
 
   private Map<String, Object> headerAttributes;
 
-  public ServiceHeader(){super();}
+  public ServiceHeader() {
+    super();
+  }
 
-  public ServiceHeader(Map<String, Object> headerAttributes){
+  public ServiceHeader(Map<String, Object> headerAttributes) {
     super();
     this.headerAttributes = headerAttributes;
   }
 
-  public Map<String, Object> getHeaderAttributes(){
-    if(headerAttributes == null){
+  public Map<String, Object> getHeaderAttributes() {
+    if (headerAttributes == null) {
       headerAttributes = new HashMap<String, Object>();
     }
     return headerAttributes;
   }
 
-  public ServiceHeader setHeaderAttributes(Map<String, Object> headerAttributes){
+  public ServiceHeader setHeaderAttributes(Map<String, Object> headerAttributes) {
     this.headerAttributes = headerAttributes;
     return this;
   }

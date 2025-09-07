@@ -1,18 +1,7 @@
 package com.business.onlineMenu.model;
 
 import com.business.onlineMenu.enums.Category;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
@@ -34,9 +23,8 @@ public class Item {
 
   private Boolean item_availability;
 
-  @OneToOne(cascade = CascadeType.ALL)
-  @JoinColumn(name = "image_id", referencedColumnName = "id")
-  private Image itemImage;
+  @Column(name = "image_id")
+  private Long itemImageId;
 
   @Enumerated(EnumType.STRING)
   private Category itemCategory;

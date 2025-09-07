@@ -21,6 +21,6 @@ public interface LoginAPI {
   ServiceResponse<Owner> login(@PathVariable("userName") String email,
                                @PathVariable("passwordHash") String passwordHash,
                                @RequestHeader HttpHeaders headers
-                                  ) throws Exception;
+  ) throws Exception;
 
 }

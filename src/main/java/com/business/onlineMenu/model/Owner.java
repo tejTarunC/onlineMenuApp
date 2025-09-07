@@ -11,21 +11,20 @@ import java.util.List;
 @Table(name = "owners")
 public class Owner {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    private String ownerName;
-    private String phoneNo;
-    private String emailId;
+  private String ownerName;
+  private String phoneNo;
+  private String emailId;
 
-    @Enumerated(EnumType.STRING)
-    private IDType identity;
+  @Enumerated(EnumType.STRING)
+  private IDType identity;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "identity_image_id", referencedColumnName = "id")
-    private Image identityImage;
+  @Column(name = "identity_image_id")
+  private Long identityImageId;
 
-    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
-    private List<Restaurant> restaurants;
+  @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+  private List<Restaurant> restaurants;
 }
