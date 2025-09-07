@@ -16,13 +16,9 @@ import lombok.Data;
 public class LoginDetails {
 
   @Id
-  @Column(name = "login_id")
+  @Column(name = "email_id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
-
-  private String userName;
-
-//  private String emailId;
+  private Long emailId;
 
   private String passwordHash;
 
