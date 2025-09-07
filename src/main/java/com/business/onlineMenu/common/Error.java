@@ -1,4 +1,4 @@
-package com.business.onlineMenu.exception;
+package com.business.onlineMenu.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

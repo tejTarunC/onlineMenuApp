@@ -6,13 +6,7 @@ import org.springframework.boot.context.metrics.buffering.BufferingApplicationSt
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(
-  basePackages = {
-    "com.business.onlineMenu.api",
-    "com.business.onlineMenu.repository",
-    "com.business.onlineMenu.model",
-    "com.business.onlineMenu.common"
-  })
+@ComponentScan(basePackages = {"com.business.onlineMenu.*"})
 public class OnlineMenuApplication {
 
   public static void main(String[] args) {
