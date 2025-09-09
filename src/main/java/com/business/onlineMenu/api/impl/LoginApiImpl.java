@@ -32,11 +32,11 @@ public class LoginApiImpl extends AbstractAPI implements LoginAPI {
     if (!validation.isValid()) {
       throw new Exception(validation.getErrorMessage());
     }
-    if (loginRequest.getPhoneNo() != null && loginRequest.getEmailId() != null) {
-      Optional<Owner> optionalResult = ownerRepo.findByEmailIdAndPhoneNo(loginRequest.getEmailId(), loginRequest.getPhoneNo());
+    if (loginRequest.getEmailId() != null) {
+      Optional<Owner> optionalResult = ownerRepo.findByEmailId(loginRequest.getEmailId());
       if (optionalResult.isEmpty()) {
-        log.info("Owner not present in DB");
-        return ServiceResponseBuilder.build(new LoginResponseDTO());
+        log.error("Owner email not present in DB");
+        throw new Exception("Owner email not present in DB");
       }
       List<Long> restaurants = optionalResult.get().getRestaurants().stream().map(Restaurant::getId).toList();
       LoginResponseDTO responseDTO = new LoginResponseDTO();
